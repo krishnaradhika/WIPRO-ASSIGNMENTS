@@ -1,0 +1,44 @@
+.movie-list-container {
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.average-rating {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+mat-card {
+  transition: box-shadow 0.3s ease-in-out;
+  border: 2px solid transparent;
+}
+
+.top-rated {
+  border: 2px solid gold;
+  box-shadow: 0 4px 10px rgba(255, 215, 0, 0.5);
+}
+
+img {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ccc;
+}
+
+.rating {
+  color: gold;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
