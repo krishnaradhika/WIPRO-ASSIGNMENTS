@@ -1,0 +1,30 @@
+<div class="bg">
+<mat-toolbar color="primary">
+  📝 To-Do List
+</mat-toolbar>
+
+<div class="container">
+  <mat-card>
+    <mat-form-field class="full-width" appearance="outline">
+      <mat-label>New Task</mat-label>
+      <input matInput [(ngModel)]="newTask" (keyup.enter)="addTask()">
+    </mat-form-field>
+    <button mat-raised-button color="primary" (click)="addTask()">Add</button>
+  </mat-card>
+
+  @if (tasks.length > 0) {
+    <mat-list>
+      @for (task of tasks; track task; let i = $index) {
+        <mat-list-item>
+          <mat-checkbox [(ngModel)]="task.done">{{ task.title }}</mat-checkbox>
+          <button mat-icon-button color="warn" (click)="deleteTask(i)">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </mat-list-item>
+      }
+    </mat-list>
+  } @else {
+    <p class="empty">✨ No tasks yet. Add one above!</p>
+  }
+</div>
+</div>

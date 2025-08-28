@@ -1,0 +1,25 @@
+.container {
+  max-width: 500px;
+  margin: 30px auto;
+  
+}
+
+.full-width {
+  width: 100%;
+}
+
+mat-list-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.empty {
+  text-align: center;
+  margin-top: 20px;
+  color: gray;
+  font-style: italic;
+}
+
+.bg{
+  background-color: rgb(187, 149, 182);
+}
